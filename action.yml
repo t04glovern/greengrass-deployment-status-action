@@ -1,0 +1,23 @@
+name: "Greengrass Deployment Status Comment"
+description: "Updates a PR comment with the status of an AWS IoT Greengrass v2 deployment"
+
+inputs:
+  aws_access_key_id:
+    description: "AWS Access Key ID"
+    required: false
+  aws_secret_access_key:
+    description: "AWS Secret Access Key"
+    required: false
+  aws_region:
+    description: "AWS Region"
+    required: true
+  github_token:
+    description: "GitHub Token"
+    required: true
+  deployment_id:
+    description: "Greengrass Deployment ID"
+    required: true
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
