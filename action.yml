@@ -11,9 +11,6 @@ inputs:
   aws_region:
     description: "AWS Region"
     required: true
-  github_token:
-    description: "GitHub Token"
-    required: true
   deployment_id:
     description: "Greengrass Deployment ID"
     required: true
