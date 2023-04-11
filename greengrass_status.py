@@ -12,8 +12,8 @@ def get_greengrass_deployment_status():
 def main():
     while True:
         deployment_status = get_greengrass_deployment_status()
-        print(f"Deployment status: {deployment_status}")
-        if deployment_status in ['ACTIVE', 'FAILED']:
+        print(f"Deployment status ({os.environ['DEPLOYMENT_ID']}): {deployment_status} - {time.asctime(time.localtime(time.time()))}")
+        if deployment_status in ['COMPLETED', 'FAILED']:
             if deployment_status == 'FAILED':
                 return 1
             else:
